@@ -11,10 +11,12 @@
 |
 */
 
-// CRUD olan bu routeda her bir methoda isim verebiliyoruz.
-Route::resource('/', 'BlogController', ['names' => [
-    'index' => 'blog.index'
-]]);
+// Tüm postların gösterildiği anasayfa route.
+Route::get('/', 'HomeController@Home')->name('home');
 
+// Post detayına girildiğinde gösterilen route.
+Route::get('/post/{slug?}', 'PostController@postDetail')->name('detail');
+
+// İçereği değişmeyen ve değer yollanmayan sabit sayfalar.
 Route::view('/about', 'about')->name('about');
 Route::view('/contact', 'contact')->name('contact');
