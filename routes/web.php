@@ -11,4 +11,8 @@
 |
 */
 
-Route::resource('/', 'BlogController');
+// CRUD olan bu routeda her bir methoda isim verebiliyoruz.
+Route::resource('/', 'BlogController', ['names' => [
+    'index' => 'blog.index'
+]]);
+Route::view('/about', 'about')->name('about');

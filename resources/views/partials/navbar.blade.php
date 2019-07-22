@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
     <div class="container">
-        <a class="navbar-brand" href="index.html">Laravel Blog</a>
+        <a class="navbar-brand" href="{{route('blog.index')}}">Laravel Blog</a>
         <button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler"
             aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fa fa-bars"></i>
@@ -8,10 +8,10 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="nav navbar-nav ml-auto">
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link" href="index.html">anasayfa</a>
+                    <a class="nav-link" href="{{route('blog.index')}}">anasayfa</a>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link" href="about.html">hakkımızda</a>
+                    <a class="nav-link" href="{{route('about')}}">hakkımızda</a>
                 </li>
                 <li class="nav-item" role="presentation">
                     <a class="nav-link" href="contact.html">iletişim</a>

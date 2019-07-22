@@ -4,8 +4,8 @@
         <div class="row">
             <div class="col-md-10 col-lg-8 mx-auto">
                 <div class="site-heading">
-                    <h1>Laravel Blog</h1>
-                    <span class="subheading">Laravel ile kodlanmıştır.</span>
+                    <h1>@yield('headerTitle')</h1>
+                    <span class="subheading">@yield('headerSub')</span>
                 </div>
             </div>
         </div>
