@@ -14,7 +14,7 @@
                     <a class="nav-link" href="{{route('about')}}">hakkımızda</a>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link" href="contact.html">iletişim</a>
+                    <a class="nav-link" href="{{route('contact')}}">iletişim</a>
                 </li>
                 <li class="nav-item" role="presentation">
                     <a class="nav-link" href="post.html">rasgele post</a>

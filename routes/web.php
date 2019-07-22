@@ -15,4 +15,6 @@
 Route::resource('/', 'BlogController', ['names' => [
     'index' => 'blog.index'
 ]]);
+
 Route::view('/about', 'about')->name('about');
+Route::view('/contact', 'contact')->name('contact');
