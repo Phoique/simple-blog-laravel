@@ -20,10 +20,10 @@
                     <a class="nav-link" href="/post/example">rasgele post</a>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link" href="register.html">kayıt ol</a>
+                    <a class="nav-link" href="{{route('register')}}">kayıt ol</a>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link" href="login.html">Giriş yap</a>
+                    <a class="nav-link" href="{{route('login')}}">Giriş yap</a>
                 </li>
             </ul>
         </div>

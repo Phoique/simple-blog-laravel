@@ -17,6 +17,12 @@ Route::get('/', 'HomeController@Home')->name('home');
 // Post detayına girildiğinde gösterilen route.
 Route::get('/post/{slug?}', 'PostController@postDetail')->name('detail');
 
+// Giriş route.
+Route::get('/login', 'LoginController@loginView')->name('login');
+
+// Kayıt route.
+Route::get('/register', 'RegisterController@registerView')->name('register');
+
 // İçereği değişmeyen ve değer yollanmayan sabit sayfalar.
 Route::view('/about', 'about')->name('about');
 Route::view('/contact', 'contact')->name('contact');
