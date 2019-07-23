@@ -7,20 +7,27 @@
         <div class="card card-signin my-5">
             <div class="card-body">
                 <h5 class="card-title text-center">Kayıt Ol</h5>
-                <form class="form-signin">
+                <form method="post" action="{{route('register.create')}}" class="form-signin">
+                    @csrf
+                    @foreach($errors->all() as $error)
+                        <div class="alert alert-danger" role="alert">
+                            {{$error}}
+                        </div>
+                    @endforeach
+                    
                     <div class="form-label-group">
-                        <input type="text" id="inputEmail" class="form-control" placeholder="Kullanıcı adı" required
+                        <input type="text" id="inputEmail" name="username" class="form-control" placeholder="Kullanıcı adı" required
                             autofocus>
                         <label for="inputEmail">Kullanıcı adı</label>
                     </div>
                     <div class="form-label-group">
-                        <input type="email" id="inputEmail" class="form-control" placeholder="Kullanıcı adı" required
+                        <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Kullanıcı adı" required
                             autofocus>
                         <label for="inputEmail">E-Posta</label>
                     </div>
 
                     <div class="form-label-group">
-                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
                         <label for="inputPassword">Şifre</label>
                     </div>
 

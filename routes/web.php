@@ -12,7 +12,7 @@
 */
 
 // Tüm postların gösterildiği anasayfa route.
-Route::get('/', 'HomeController@Home')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 
 // Post detayına girildiğinde gösterilen route.
 Route::get('/post/{slug?}', 'PostController@postDetail')->name('detail');
@@ -21,7 +21,8 @@ Route::get('/post/{slug?}', 'PostController@postDetail')->name('detail');
 Route::get('/login', 'LoginController@loginView')->name('login');
 
 // Kayıt route.
-Route::get('/register', 'RegisterController@registerView')->name('register');
+Route::get('/register', 'RegisterController@index')->name('register');
+Route::post('/register', 'RegisterController@create')->name('register.create');
 
 // İçereği değişmeyen ve değer yollanmayan sabit sayfalar.
 Route::view('/about', 'about')->name('about');
