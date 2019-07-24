@@ -16,7 +16,27 @@ class HomeController extends Controller
     }
 
     // ve tıklanan postun detayı.
-    public function show($postSlug = null) {
-        return view('postDetail');
+    public function show($slug = null) {
+
+        // Url kısmı /post/ şeklinde boş değilse.
+        if(!empty($slug)) {
+
+            $post = Post::where('slug', $slug)->get();
+
+            // böyle bir post bulamazsa.
+            if(count($post) === 0) {
+                return redirect()->route('home');
+            }
+
+            // Bulduğunda.
+            else {
+                return $post;
+            }
+        }
+
+        // parametre gelmezse.
+        else {
+            return redirect()->route('home');
+        }
     }
 }
