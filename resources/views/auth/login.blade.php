@@ -1,8 +1,9 @@
 @extends('layouts.layout1')
 @section('title', 'Giriş Yap')
 @section('content')
+@extends('partials.authNavbar')
 <div class="container">
-    <div class="row justify-content-center mt-5">
+    <div class="row justify-content-center" style="position: relative;top: 150px;">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Giriş Yap') }}</div>

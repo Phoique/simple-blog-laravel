@@ -6,7 +6,11 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function postDetail($postSlug = null) {
-        return view('postDetail');
+    public function index($postSlug = null) {
+        return view('add');
+    }
+
+    public function create(Request $request) {
+        return $request -> post();
     }
 }

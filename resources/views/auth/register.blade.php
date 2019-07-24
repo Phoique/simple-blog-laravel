@@ -1,12 +1,12 @@
 @extends('layouts.layout1')
 @section('title', 'Kayıt Ol')
 @section('content')
+@extends('partials.authNavbar')
 <div class="container">
-    <div class="row justify-content-center mt-5">
+    <div class="row justify-content-center" style="position: relative;top: 150px;">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Kayıt Ol') }}</div>
-
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf

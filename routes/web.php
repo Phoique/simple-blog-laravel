@@ -14,8 +14,10 @@
 // Tüm postların gösterildiği anasayfa route.
 Route::get('/', 'HomeController@index')->name('home');
 
-// Post detayına girildiğinde gösterilen route.
-Route::get('/post/{slug?}', 'PostController@postDetail')->name('detail');
+// Post ile ilgili route.
+Route::get('/post/add', 'PostController@index')->name('post.index');
+Route::post('/post/add', 'PostController@create')->name('post.create');
+Route::get('/post/{slug?}', 'HomeController@show')->name('index');
 
 // İçereği değişmeyen ve değer yollanmayan sabit sayfalar.
 Route::view('/about', 'about')->name('about');

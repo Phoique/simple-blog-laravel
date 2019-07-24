@@ -1,4 +1,4 @@
-<nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
+<nav class="navbar navbar-light navbar-expand-lg fixed-top bg-dark" id="mainNav">
     <div class="container">
         <a class="navbar-brand" href="{{route('home')}}">Laravel Blog</a>
         <button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler"
