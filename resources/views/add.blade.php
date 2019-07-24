@@ -9,6 +9,11 @@
                 <h5 class="card-title text-center">Blog yazısı ekle</h5>
                 <form method="post" action="{{ route('post.create') }}" class="form-signin">
                     @csrf
+                    @foreach($errors->all() as $error)
+                        <div class="alert alert-danger" role="alert">
+                            {{$error}}
+                        </div>
+                    @endforeach
                     <div class="form-group row">
                         <label for="title" class="col-sm-3 col-form-label">Başlık</label>
                         <div class="col-sm-9">
