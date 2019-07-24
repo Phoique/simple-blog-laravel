@@ -30,7 +30,9 @@ class HomeController extends Controller
 
             // Bulduğunda.
             else {
-                return $post;
+                return view('postDetail', [
+                    'post' => $post 
+                ]);
             }
         }
 
