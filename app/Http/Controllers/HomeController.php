@@ -3,12 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
 
 class HomeController extends Controller
 {
     // Tüm postlar
     public function index() {
-        return view('home');
+        $posts = Post::orderBy('id', 'DESC')->get();
+        return view('home', [
+            'posts' => $posts
+        ]);
     }
 
     // ve tıklanan postun detayı.

@@ -4,25 +4,17 @@
 @section('headerTitle', 'Laravel Blog')
 @section('headerSub', 'Laravel ile kodlanmıştır.')
 <div class="row">
-    <div class="col-md-12 col-lg-6">
-        <div class="post-preview">
-            <a href="#">
-                <h2 class="post-title">Man must explore, and this is exploration at its greatest</h2>
-                <h3 class="post-subtitle">Problems look mighty small from 150 miles up</h3>
-            </a>
-            <p class="post-meta">Posted by&nbsp;<a href="#">Start Bootstrap on September 24, 2018</a></p>
+    @foreach($posts as $post)
+        <div class="col-md-12 col-lg-6">
+            <div class="post-preview">
+                <a href="/post/{{ $post -> slug }}">
+                    <h2 class="post-title">{{ $post -> title }}</h2>
+                    <h3 class="post-subtitle">{{ $post -> sub_title }}</h3>
+                </a>
+                <p class="post-meta">Yazar: &nbsp;{{ $post -> getUser -> username }}</p>
+            </div>
+            <hr>
         </div>
-        <hr>
-    </div>
-    <div class="col-md-12 col-lg-6">
-        <div class="post-preview">
-            <a href="#">
-                <h2 class="post-title">Man must explore, and this is exploration at its greatest</h2>
-                <h3 class="post-subtitle">Problems look mighty small from 150 miles up</h3>
-            </a>
-            <p class="post-meta">Posted by&nbsp;<a href="#">Start Bootstrap on September 24, 2018</a></p>
-        </div>
-        <hr>
-    </div>
+    @endforeach
 </div>
 @endsection
