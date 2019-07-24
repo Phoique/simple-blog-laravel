@@ -28,5 +28,6 @@ class PostController extends Controller
         $post -> sub_title = $request -> post('sub_title');
         $post -> content = $request -> post('content');
         $post -> save();
+        return redirect('/post/'.$post -> slug);
     }
 }
