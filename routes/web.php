@@ -15,8 +15,8 @@
 Route::get('/', 'HomeController@index')->name('home');
 
 // Post ile ilgili route.
-Route::get('/post/add', 'PostController@index')->name('post.index');
-Route::post('/post/add', 'PostController@create')->name('post.create');
+Route::get('/post/add', 'PostController@index')->name('post.index')->middleware('auth');
+Route::post('/post/add', 'PostController@create')->name('post.create')->middleware('auth');
 Route::get('/post/{slug?}', 'HomeController@show');
 
 // İçereği değişmeyen ve değer yollanmayan sabit sayfalar.
