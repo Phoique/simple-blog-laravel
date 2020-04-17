@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f763dbcd50335d2a4dbb1cbd15e333ef",
+    "content-hash": "a57300446bd71007f06444fbb4ab2d16",
     "packages": [
         {
             "name": "cocur/slugify",
@@ -73,20 +73,21 @@
         },
         {
             "name": "cviebrock/eloquent-sluggable",
-            "version": "4.8.0",
+            "version": "4.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cviebrock/eloquent-sluggable.git",
-                "reference": "4a5bf905b55e7eb0a30ef5933f647387dc8f365a"
+                "reference": "8820cf93a911cd6a1c440a8f5889caedac5cf697"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cviebrock/eloquent-sluggable/zipball/4a5bf905b55e7eb0a30ef5933f647387dc8f365a",
-                "reference": "4a5bf905b55e7eb0a30ef5933f647387dc8f365a",
+                "url": "https://api.github.com/repos/cviebrock/eloquent-sluggable/zipball/8820cf93a911cd6a1c440a8f5889caedac5cf697",
+                "reference": "8820cf93a911cd6a1c440a8f5889caedac5cf697",
                 "shasum": ""
             },
             "require": {
                 "cocur/slugify": "^3.1",
+                "ext-mbstring": "*",
                 "illuminate/config": "~5.8.0",
                 "illuminate/database": "~5.8.0",
                 "illuminate/support": "~5.8.0",
@@ -132,7 +133,7 @@
                 "slug",
                 "sluggable"
             ],
-            "time": "2019-03-01T05:04:21+00:00"
+            "time": "2020-02-09T22:52:29+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -2351,6 +2352,20 @@
                 "portable",
                 "shim"
             ],
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-03-09T19:04:49+00:00"
         },
         {
@@ -2410,6 +2425,20 @@
                 "portable",
                 "shim"
             ],
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-03-09T19:04:49+00:00"
         },
         {
@@ -2464,6 +2493,20 @@
                 "polyfill",
                 "portable",
                 "shim"
+            ],
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
             ],
             "time": "2020-02-27T09:26:54+00:00"
         },
@@ -4790,5 +4833,6 @@
     "platform": {
         "php": "^7.1.3"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }
